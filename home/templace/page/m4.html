@@ -1,0 +1,11 @@
+<h2 style="color: #667eea; margin-bottom: 30px;">📚 Blog Làm từ Python Django</h2>
+{% for post in Posts %}
+    <div style="margin-bottom: 20px; padding: 15px; background: #ffffff; border-left: 4px solid #667eea; border-radius: 4px;">
+        <h4>
+            <span style="color: #666;">{{ post.date|date:"d-m-Y" }}</span>
+            <a href="{% url 'home' %}?module=m4&post_id={{ post.id }}" style="color: #0d6efd; text-decoration: none;">{{ post.title }}</a>
+        </h4>
+    </div>
+{% empty %}
+    <p style="color: #666;">Chưa có bài viết nào.</p>
+{% endfor %}
