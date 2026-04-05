@@ -67,16 +67,14 @@
                         {% csrf_token %}
                         <button type="submit"
                             style="background:none; border:none; color:#ef4444; font-weight:bold; cursor:pointer; padding:0; transition:color 0.3s;"
-                            onmouseover="this.style.color='#fca5a5'" onmouseout="this.style.color='#ef4444'">Đăng
-                            xuất</button>
+                            onmouseover="this.style.color='#fca5a5'" onmouseout="this.style.color='#ef4444'">Đăng xuất</button>
                     </form>
                     {% else %}
                     <a href="{% url 'home:login' %}"
                         style="color: #cbd5e1; text-decoration: none; font-weight: 500; transition: color 0.3s;"
                         onmouseover="this.style.color='#38bdf8'" onmouseout="this.style.color='#cbd5e1'">Đăng nhập</a>
                     <a href="{% url 'home:register' %}" class="btn"
-                        style="padding: 0.4rem 1rem; border-radius: 2rem; color: #0f172a !important; font-size: 0.9rem;">Đăng
-                        ký</a>
+                        style="padding: 0.4rem 1rem; border-radius: 2rem; color: #0f172a !important; font-size: 0.9rem;">Đăng ký</a>
                     {% endif %}
                 </div>
             </div>
@@ -269,6 +267,7 @@
             "Cửa hàng": "Store",
             "Quản trị": "Admin Dashboard",
             "Giỏ hàng": "Cart",
+            "🛒 Giỏ hàng": "🛒 Cart",
             "Đăng nhập": "Login",
             "Đăng ký": "Register",
             "Đăng xuất": "Logout",
@@ -288,7 +287,7 @@
             "Đồng hồ thông minh": "Smartwatches",
             "Phụ kiện": "Accessories",
             "VNĐ": "VND",
-            
+            "Không có sản phẩm nào trong danh mục này.": "There are no products in this category.",
             // Checkout
             "Thanh toán": "Checkout",
             "Thông tin giao hàng": "Shipping Information",
@@ -303,13 +302,22 @@
             "💳 Thẻ tín dụng / Ghi nợ": "💳 Credit / Debit Card",
             "🏦 Chuyển khoản qua Ngân hàng": "🏦 Bank Transfer",
             "💳 Xác nhận đặt hàng": "💳 Confirm Order",
-
+            "Đặt hàng thành công!":"Order placed successfully!",
+            "Quay lại trang chủ": "Back to Home",
+            "Tất cả sản phẩm":"All Products",
+            "Danh mục":"Category",
+            "Giỏ hàng của bạn đang trống":"Your cart is empty.",
+            "Quay lại cửa hàng": "Back to Store",
+            "Chưa có tài khoản?":"Don't have an account?",
+            "Đăng ký ngay":"Register Now",
+            "Đăng ký tài khoản":"Register an Account",
             // Utilities & Chat
             "💬 Hỗ trợ trực tuyến": "💬 Live Support",
             "Xin chào! Chúng tôi có thể giúp gì cho bạn?": "Hello! How can we help you?",
             "Nhập tin nhắn...": "Type your message...",
             "Gửi": "Send",
             "Hỗ trợ trực tuyến": "Live Support",
+            "Đã có tài khoản?":"Already have an account?",
             "Tìm kiếm sản phẩm...": "Search products..."
         };
         let currentLang = 'vi'; // default
