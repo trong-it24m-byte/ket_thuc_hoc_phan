@@ -10,9 +10,9 @@ Một dự án demo cửa hàng thiết bị công nghệ xây trên Django. Bao
 ---
 
 ## Yêu cầu
-- Python 3.10+ (hoặc phiên bản Python bạn đang dùng cho dự án)
+- Python 3.10+
 - pip
-- virtualenv (khuyến nghị sử dụng môi trường ảo)
+- virtualenv 
 
 Dependencies được liệt kê trong `requirements.txt`.
 
@@ -62,7 +62,9 @@ Mở trình duyệt vào `http://127.0.0.1:8000/` để xem.
 
 ---
 
-```
+```Website demo
+https://ket-thuc-hoc-phan.onrender.com/
+``` 
 
 ---
 
