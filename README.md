@@ -23,7 +23,7 @@ Dependencies được liệt kê trong `requirements.txt`.
 1. Mở terminal ở thư mục project:
 
 ```powershell
-cd Test-master
+cd ket_thuc_hoc_phan-master
 ```
 
 2. Tạo và kích hoạt virtual environment:
