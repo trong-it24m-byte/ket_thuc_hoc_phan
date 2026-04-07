@@ -65,20 +65,27 @@ def checkout(request):
         last_name = request.POST.get('last_name')
         email = request.POST.get('email')
         address = request.POST.get('address')
-        postal_code = request.POST.get('postal_code')
+        postal_code = (request.POST.get('postal_code') or '').strip()
         city = request.POST.get('city')
         payment_method = request.POST.get('payment_method', 'cash')
 
+        if not postal_code:
+            return render(
+                request,
+                'store/checkout.html',
+                {'cart': cart, 'error': 'Vui lòng nhập mã bưu chính.'}
+            )
+
         order = Order.objects.create(
-            first_name=first_name, last_name=last_name, 
-            email=email, address=address, 
+            first_name=first_name, last_name=last_name,
+            email=email, address=address,
             postal_code=postal_code, city=city,
             payment_method=payment_method
         )
         if request.user.is_authenticated:
             order.user = request.user
             order.save()
-            
+
         for item in cart:
             OrderItem.objects.create(
                 order=order, product=item['product'],
@@ -123,4 +130,3 @@ def error(request, exception=None):
 
 def error_500(request):
     return render(request, 'error.html', status=500)
-
