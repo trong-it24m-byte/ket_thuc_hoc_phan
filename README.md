@@ -4,8 +4,10 @@ Một dự án demo cửa hàng thiết bị công nghệ xây trên Django. Bao
 - Quản lý sản phẩm với thông số kỹ thuật (CPU, RAM, Storage, màn hình)
 - Giỏ hàng lưu trong session
 - Hệ thống chat cơ bản (hỗ trợ user đã đăng nhập và ẩn danh)
-- Seed data sẵn để demo (iPhone, MacBook, v.v.)
+- Seed data sẵn để demo (iPhone, MacBook, v.v.) (SQLite)
 - Giao diện admin được nâng cấp bằng `jazzmin`
+- Sử dụng PostgreSQL.
+- Lưu hình ảnh sản phẩm lên Cloudinary.
 
 ---
 
